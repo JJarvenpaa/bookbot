@@ -23,3 +23,25 @@ def char_count(text):
 
     return chars;
 
+def sort_by_count(dict): 
+    return dict['count'];
+
+def sort_chars(chars):
+    sorted_chars = [];
+
+    for k in chars:
+        char_dict = {'char': k, 'count': chars[k]};
+        sorted_chars.append(char_dict);
+    
+    sorted_chars.sort(reverse = True, key = sort_by_count);
+    
+    return sorted_chars;
+
+#def print_report(sorted_chars = [], chars = {}, book = ''):
+#    print('============ BOOKBOT ============');
+#    print('Analyzing book found at ' + book);
+#    print('----------- Word Count ----------');
+#    print('Found ' + chars + ' total words');
+#    print('--------- Character Count -------');
+
+

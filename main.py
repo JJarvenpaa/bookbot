@@ -1,4 +1,4 @@
-from stats import count_words, get_book_text, char_count;
+from stats import count_words, get_book_text, char_count, sort_chars;
 
 
 def main():
@@ -7,7 +7,9 @@ def main():
     print(f'{num_words} words found in the document');
 
     chars = char_count(book);
-    print(chars);
+    sorted_chars = sort_chars(chars);
+
+    print(sorted_chars);
 
 main();
 
