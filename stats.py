@@ -37,11 +37,17 @@ def sort_chars(chars):
     
     return sorted_chars;
 
-#def print_report(sorted_chars = [], chars = {}, book = ''):
-#    print('============ BOOKBOT ============');
-#    print('Analyzing book found at ' + book);
-#    print('----------- Word Count ----------');
-#    print('Found ' + chars + ' total words');
-#    print('--------- Character Count -------');
+def print_report(sorted_chars = [], num_words = 0, book = ''):
+    print('============ BOOKBOT ============');
+    print('Analyzing book found at ' + book);
+    print('----------- Word Count ----------');
+    print(f'Found {num_words} total words');
+    print('--------- Character Count -------');
+    for dict in sorted_chars:
+        if(dict['char'].isalpha() != True): continue;
+
+        print(f"{dict['char']}: {dict['count']}");
+    
+    print('============= END ===============');
 
 
